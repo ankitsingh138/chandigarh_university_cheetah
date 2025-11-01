@@ -8,7 +8,7 @@ import Dashboard from '../pages/Dashboard'
 import Insurance from '../pages/Insurance'
 import EmergencyShop from '../pages/EmergencyShop'
 import SecurityGuide from '../pages/SecurityGuide'
-import SafetyAssistant from '../pages/SafetyAssistant'
+import Quiz from '../pages/Quiz'
 
 const AppRoutes = () => {
   return (
@@ -21,11 +21,12 @@ const AppRoutes = () => {
       <Route path="/dashboard" element={<DashboardLayout />}>
         <Route index element={<Dashboard />} />
         {/* Placeholder routes for other dashboard pages */}
-        <Route path="safety-assistant" element={<SafetyAssistant />} />
+        <Route path="safety-assistant" element={<div className="p-8"><h1 className="text-2xl text-text-primary">Safety Assistant - Coming Soon</h1></div>} />
         <Route path="weather-alerts" element={<div className="p-8"><h1 className="text-2xl text-text-primary">Weather Alerts - Coming Soon</h1></div>} />
         <Route path="insurance" element={<Insurance />} />
         <Route path="emergency-shop" element={<EmergencyShop />} />
         <Route path="security-guide" element={<SecurityGuide />} />
+        <Route path="quiz" element={<Quiz />} />
       </Route>
       
       {/* Main app pages (with navbar) */}
