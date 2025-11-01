@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Variables for Theme Switching */
+:root {
+  /* Dark Theme (default) */
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #0f0f0f;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --accent-color: #ff4444; /* Red-orange accent */
+  --accent-glow: rgba(255, 68, 68, 0.6); /* Glow color */
+  --purple-accent: #8b5cf6; /* Purple accent for dashboard */
+  --purple-glow: rgba(139, 92, 246, 0.5); /* Purple glow */
+}
+
+[data-theme="light"] {
+  /* Light Theme */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #0b0b0b;
+  --text-secondary: #4b5563;
+  --accent-color: #06b6d4; /* Cyan accent for light mode */
+  --accent-glow: rgba(6, 182, 212, 0.5); /* Cyan glow */
+  --purple-accent: #8b5cf6; /* Purple accent for dashboard */
+  --purple-glow: rgba(139, 92, 246, 0.5); /* Purple glow */
+}
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+/* Smooth theme transition */
+#root {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Radial glow background effect */
+.radial-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(
+    circle at center,
+    var(--accent-glow) 0%,
+    transparent 70%
+  );
+  opacity: 0.3;
+}
+
+/* Glow button animation */
+.glow-button {
+  box-shadow: 0 0 20px var(--accent-glow), 0 0 40px var(--accent-glow);
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+/* Auth primary button glow */
+.auth-primary-button {
+  box-shadow: 0 0 15px var(--accent-glow), 0 0 30px var(--accent-glow);
+  animation: glow-pulse-subtle 2s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px var(--accent-glow), 0 0 40px var(--accent-glow);
+  }
+  50% {
+    box-shadow: 0 0 30px var(--accent-glow), 0 0 60px var(--accent-glow), 0 0 90px var(--accent-glow);
+  }
+}
+
+@keyframes glow-pulse-subtle {
+  0%, 100% {
+    box-shadow: 0 0 15px var(--accent-glow), 0 0 30px var(--accent-glow);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--accent-glow), 0 0 40px var(--accent-glow);
+  }
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--purple-accent);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--purple-glow);
+}
