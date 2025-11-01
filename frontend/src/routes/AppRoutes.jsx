@@ -8,6 +8,7 @@ import Dashboard from '../pages/Dashboard'
 import Insurance from '../pages/Insurance'
 import EmergencyShop from '../pages/EmergencyShop'
 import SecurityGuide from '../pages/SecurityGuide'
+import Quiz from '../pages/Quiz'
 import SafetyAssistant from '../pages/SafetyAssistant'
 
 const AppRoutes = () => {
@@ -26,6 +27,7 @@ const AppRoutes = () => {
         <Route path="insurance" element={<Insurance />} />
         <Route path="emergency-shop" element={<EmergencyShop />} />
         <Route path="security-guide" element={<SecurityGuide />} />
+        <Route path="quiz" element={<Quiz />} />
       </Route>
       
       {/* Main app pages (with navbar) */}
