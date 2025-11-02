@@ -73,10 +73,17 @@ const QuizIcon = () => (
   </svg>
 )
 
+const NewsIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+)
+
 const navItems = [
-  { path: '/dashboard', label: 'Dashboard', icon: DashboardIcon },
+  // { path: '/dashboard', label: 'Dashboard', icon: DashboardIcon },
+  { path: '/dashboard/news', label: 'News', icon: NewsIcon },
   { path: '/dashboard/safety-assistant', label: 'Safety Assistant', icon: HardHatIcon },
-  { path: '/dashboard/weather-alerts', label: 'Weather Alerts', icon: WeatherIcon },
+  // { path: '/dashboard/weather-alerts', label: 'Weather Alerts', icon: WeatherIcon },
   { path: '/dashboard/insurance', label: 'Insurance', icon: ShieldIcon },
   { path: '/dashboard/emergency-shop', label: 'Emergency Shop', icon: ShoppingCartIcon },
   { path: '/dashboard/security-guide', label: 'Security Guide', icon: ShieldIcon },

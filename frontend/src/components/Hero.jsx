@@ -68,7 +68,7 @@ const Hero = () => {
             variants={itemVariants}
             className="flex justify-center"
           >
-            <Button to="/dashboard" variant="primary">
+            <Button to="/dashboard/news" variant="primary">
               Get Started
             </Button>
           </motion.div>
